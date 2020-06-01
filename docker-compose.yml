@@ -1,0 +1,31 @@
+# Use postgres/example user/password credentials
+version: "3.1"
+
+services:
+    #angular:
+     #   build: ./aracAng/dist/
+      #  restart: always
+       # ports:
+        #    - 80:80
+    api:
+        build: ./build/aracApi/
+        restart: always
+        ports:
+            - 8081:8081
+    db:
+        image: postgres
+        restart: always
+        environment:
+            POSTGRES_USER: user
+            POSTGRES_PASSWORD: pass
+            POSTGRES_DB: db
+        ports:
+            - '5432:5432'
+
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 8087:8080
+volumes:
+    data:

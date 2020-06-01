@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-AracApplication<arac>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "ual.dra.arac.AracApplication",
+            "projectName": "arac",
+            "args": ""
+        }
+    ]
+}
