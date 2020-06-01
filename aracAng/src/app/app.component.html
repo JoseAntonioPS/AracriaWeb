@@ -1,0 +1,21 @@
+<html>
+  
+  <h1 class="h0">.</h1>
+  <nav>
+    <div>     
+      <a routerLink="/home">Home</a>
+      <a routerLink="/characters">Characters</a>
+      <a routerLink="/designs">Designs</a>
+      <a routerLink="/personaje">Ranking</a>
+    </div>
+    <div>
+      <a href="/profile" class="nav-link" *ngIf="isLoggedIn" routerLink="profile/{{username}}">{{username}}</a>
+      <a *ngIf="lO" routerLink="/register">Register</a>
+      <a class="nav-link" *ngIf="isLoggedIn" (click)="logout()">LogOut</a>
+      <a *ngIf="lO" routerLink="/login">Login</a>
+    </div>
+
+           
+  </nav> 
+  <router-outlet></router-outlet>
+</html>
